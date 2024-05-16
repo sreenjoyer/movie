@@ -11,7 +11,7 @@ get_random_movie_url = f'{movie_url}/get_random_movie'
 get_kinopoisk_movie_by_id_url = f'{movie_url}/get_movie_by_id'
 
 new_movie = {
-    "id": 0,
+    "id": 99,
     "movie_name": "testName",
     "creation_date": "2024-02-29T14:42:44.260037",
     "genre": "testGenre",
@@ -28,12 +28,12 @@ def test_2_get_movies():
 
 
 def test_3_get_get_movie_by_id():
-    res = requests.get(f"{get_movie_by_id_url}?movie_id=0").json()
+    res = requests.get(f"{get_movie_by_id_url}?movie_id=99").json()
     assert res == new_movie
 
 
 def test_4_delete_movie():
-    res = requests.delete(f"{delete_movie_url}?movie_id=0").json()
+    res = requests.delete(f"{delete_movie_url}?movie_id=99").json()
     assert res == "Success"
 
 
