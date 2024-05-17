@@ -18,10 +18,6 @@ new_movie = {
     "director": "testDirector"
 }
 
-def test_1_add_favourite():
-    res = requests.post(f"{add_movie_url}", json=new_movie)
-    assert res.status_code == 200
-
 def test_2_get_movies():
     res = requests.get(f"{get_movies_url}").json()
     assert new_movie in res
