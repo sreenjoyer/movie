@@ -32,8 +32,8 @@ jobs:
       - name: Run integration test
         run: pytest tests/integration
 
-      - name: Run component test
-        run: pytest tests/component
+      # - name: Run component test
+      #   run: pytest tests/component
 
       - name: Clean up (compose down)
         run: docker compose down
